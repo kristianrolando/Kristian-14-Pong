@@ -10,12 +10,12 @@ public class BallControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = speed;
+        ResetBall();
     }
 
-
-    void Update()
+    public void ResetBall()
     {
-        
+        transform.position = Vector2.zero;
+        rb.velocity = speed;
     }
 }

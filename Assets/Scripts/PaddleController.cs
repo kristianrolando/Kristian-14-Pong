@@ -21,9 +21,15 @@ public class PaddleController : MonoBehaviour
     private Vector2 GetInput()
     {
         if(Input.GetKey(upKey))
+        {
+            Debug.Log(Vector2.up * speed);
             return Vector2.up * speed;
+        }
         else if(Input.GetKey(downKey))
+        {
+            Debug.Log(Vector2.down * speed);
             return Vector2.down * speed;
+        }
 
         return Vector2.zero;
     }
